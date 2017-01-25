@@ -1,0 +1,36 @@
+@import '../../../scss/layout/container';
+
+
+
+
+:host {
+    display: block;
+    font-size: 1rem;
+    padding: 1em 0 1.8em;
+}
+
+.items {
+    @include g-layout__container;
+    display: flex; 
+    list-style: none; 
+}
+
+.item {
+    padding: 0 1em;
+}
+
+.item__link {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+        
+.item__link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+// First
+.item:first-child {
+    padding-left: 0;
+}
