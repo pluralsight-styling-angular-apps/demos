@@ -1,0 +1,51 @@
+@import '../../../scss/root/links';
+
+
+
+
+:host {
+    border-top: solid 1px #ccc;
+    display: block;
+}
+
+.items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.item {        
+    border: solid 1px #ccc;
+    border-top: none;
+}
+
+.item__label {
+    @include g-root__link;
+    display: flex;
+    padding: 1em;
+}
+
+.item__label::after {
+    content: '\25bc';
+    max-width: 1em;
+    min-width: 1em;
+}
+
+.item__label-text {
+    flex: 1;
+    padding-right: 0.5em;
+}
+
+// Hover
+.item__label:hover {
+    text-decoration: none;
+}
+
+.item__label:hover .item__label-text {
+    text-decoration: underline;
+}
+
+// Active
+.item__label--active::after {
+    content: '\25b2';
+}
