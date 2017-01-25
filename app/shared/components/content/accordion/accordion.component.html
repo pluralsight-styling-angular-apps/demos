@@ -1,0 +1,12 @@
+<ul>
+    <li *ngFor="let item of items">
+        <a 
+            (click)="selectItem(item)"
+            [class.active]="item.active">
+            <span>
+                {{item.title}}
+            </span>
+        </a>
+        <template [ngTemplateOutlet]="item.template"></template>
+    </li>
+</ul>
