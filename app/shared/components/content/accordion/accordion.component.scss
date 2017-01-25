@@ -1,0 +1,51 @@
+@import '../../../scss/root/links';
+
+
+
+
+:host {
+    border-top: solid 1px #ccc;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {        
+    border: solid 1px #ccc;
+    border-top: none;
+}
+
+a {
+    @include g-root__link;
+    display: flex;
+    padding: 1em;
+}
+
+a::after {
+    content: '\25bc';
+    max-width: 1em;
+    min-width: 1em;
+}
+
+span {
+    flex: 1;
+    padding-right: 0.5em;
+}
+
+// Hover
+a:hover {
+    text-decoration: none;
+}
+
+a:hover span {
+    text-decoration: underline;
+}
+
+// Active
+a.active::after {
+    content: '\25b2';
+}
