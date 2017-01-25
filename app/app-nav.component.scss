@@ -1,0 +1,24 @@
+:host {
+    background: #2A9FBC; 
+    border-radius: 0.5em;
+    display: block; 
+    margin: 1.5em 0; 
+    padding: 1em 1.2em;
+}
+
+ul {
+    display: flex; 
+    list-style: none; 
+    margin: 0; 
+    padding: 0;
+}
+
+:host ul /deep/ a {
+    color: #fff;
+    padding: 0 1em; 
+    text-decoration: none;
+}
+
+:host ul /deep/ a:hover {
+    text-decoration: underline;
+}
