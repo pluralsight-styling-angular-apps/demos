@@ -1,0 +1,20 @@
+<a class="trigger" (click)="toggleOpenClose()">
+    <ng-content></ng-content>
+</a>
+<div 
+    [hidden]="!isOpen"
+    (click)="toggleOpenClose()"
+    class="shield">
+</div>
+<div 
+    [hidden]="!isOpen" 
+    class="modal">
+    <a 
+        (click)="toggleOpenClose()"
+        class="modal__close">
+        close
+    </a>
+    <div class="modal__content">
+        <ng-content select="[slot-content]"></ng-content>
+    </div>
+</div>
