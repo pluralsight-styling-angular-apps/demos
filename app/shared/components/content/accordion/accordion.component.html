@@ -1,0 +1,16 @@
+<ul class="accordion">
+    <li 
+        *ngFor="let item of items"
+        class="accordion__item"
+        [class.accordion__item--active]="item.active">
+        <a 
+            (click)="selectItem(item)"
+            class="accordion__label"
+            [class.accordion__label--active]="item.active">
+            <span class="accordion__label-text">
+                {{item.title}}
+            </span>
+        </a>
+        <template [ngTemplateOutlet]="item.template"></template>
+    </li>
+</ul>
