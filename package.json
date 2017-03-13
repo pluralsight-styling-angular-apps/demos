@@ -7,7 +7,7 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "prestart": "npm run clean",
-    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" "
+    "start": "concurrently \"tsc -w\" \"lite-server\" "
   },
   "dependencies": {
     "@angular/common": "~2.1.1",
