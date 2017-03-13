@@ -9,7 +9,7 @@
     "scss": "node-sass styles/ -o styles/",
     "scss:w": "npm run scss && node-sass styles/ -wo styles/",
     "prestart": "npm run clean",
-    "start": "tsc && concurrently \"npm run scss\" \"npm run scss:w\" \"tsc -w\" \"lite-server\" "
+    "start": "concurrently \"npm run scss\" \"npm run scss:w\" \"tsc -w\" \"lite-server\" "
   },
   "dependencies": {
     "@angular/common": "~2.1.1",
